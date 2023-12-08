@@ -10,26 +10,25 @@
 </head>
 <body>
 
-<p id="notification" hidden></p>
-<div class="entry-modal" id="entry-modal">
-    <p>Create or Join Meeting</p>
-    <input id="room-input" class="room-input" placeholder="Enter Room ID">
-    <div>
-        <button onclick="createRoom()">Create Room</button>
-        <button onclick="joinRoom()">Join Room</button>
+    <p id="notification" hidden></p>
+    <div class="entry-modal" id="entry-modal">
+        <p>Create or Join Meeting</p>
+        <input id="room-input" class="room-input" placeholder="Enter Room ID">
+        <div>
+            <button onclick="createRoom()">Create Room</button>
+            <button onclick="joinRoom()">Join Room</button>
+        </div>
     </div>
-</div>
-<div class="meet-area">
-    <!-- Remote Video Element-->
-    <video id="remote-video"></video>
-
-    <!-- Local Video Element-->
-    <video id="local-video"></video>
-    <div class="meet-controls-bar">
-        <button onclick="startScreenShare()">Screen Share</button>
+    <div class="meet-area">
+        <div id="remote-video-container" class="remote-video-container"></div>
+        <video id="local-video"></video>
+        <div class="meet-controls-bar" id="controls-bar" hidden>
+            <button onclick="startScreenShare()">Screen Share</button>
+            <button id="leave-btn" onclick="leaveRoom()">Leave Room</button>
+            <button id="toggle-camera-btn">Camera</button>
+            <button id="toggle-microphone-btn">Microphone</button>
+        </div>
     </div>
-    <button id="leave-btn">Leave Room</button>
-</div>
     <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
 <script src="script.js"></script>
 </body>
