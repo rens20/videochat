@@ -10,6 +10,7 @@
 </head>
 <body>
 
+   <h1 class="title">Delta Meet</h1>
     <p id="notification" hidden></p>
     <div class="entry-modal" id="entry-modal">
         <p>Create or Join Meeting</p>
@@ -20,9 +21,12 @@
         </div>
     </div>
     <div class="meet-area">
-        <div id="remote-video-container" class="remote-video-container"></div>
+        <!-- Remote Video Element-->
+        <video id="remote-video"></video>
+
+        <!-- Local Video Element-->
         <video id="local-video"></video>
-        <div class="meet-controls-bar" id="controls-bar" hidden>
+        <div class="meet-controls-bar">
             <button onclick="startScreenShare()">Screen Share</button>
             <button id="leave-btn" onclick="leaveRoom()">Leave Room</button>
             <button id="toggle-camera-btn">Camera</button>
