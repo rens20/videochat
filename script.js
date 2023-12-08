@@ -1,4 +1,4 @@
- const PRE = "DELTA";
+const PRE = "DELTA";
 const SUF = "MEET";
 var room_id;
 var getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
@@ -164,7 +164,7 @@ function stopScreenSharing() {
 }
 
 // Add an event listener to the "Leave Room" button
-document.getElementById("leave-btn").addEventListener("click", leaveRoom);
+document.getElementById("leave-btn").addEventListener("click", 
 
 
 
